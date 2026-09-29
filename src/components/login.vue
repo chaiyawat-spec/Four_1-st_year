@@ -124,7 +124,11 @@ export default {
   },
   methods: {
     onSubmit() {
-      // TODO: ตรวจชื่อ/รหัสผ่านตรงนี้ ถ้าถูกค่อย this.$emit("login_success")
+      if (this.name.trim() === "พัชรดา ธนูศิริ" && this.password === "12/10/2568") {
+      this.$emit("login_success");
+    } else {
+      alert("ผิดนะจ๊ะ ลองใหม่อีกที 🥺");
+    }
     },
   },
 };
